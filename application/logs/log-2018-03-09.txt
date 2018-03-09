@@ -1,0 +1,23 @@
+DEBUG - 2018-03-09 23:25:53 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:25:53 --> No URI present. Default controller set.
+DEBUG - 2018-03-09 23:25:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-09 23:25:53 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-09 23:25:58 --> Total execution time: 5.5963
+DEBUG - 2018-03-09 23:26:04 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:26:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-09 23:26:05 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-09 23:26:08 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:26:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-09 23:26:08 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-09 23:26:08 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-09 23:26:09 --> Total execution time: 1.0191
+DEBUG - 2018-03-09 23:26:23 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:26:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-09 23:26:23 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-09 23:26:23 --> Total execution time: 0.1650
+DEBUG - 2018-03-09 23:28:12 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:28:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-09 23:28:12 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-09 23:28:13 --> UTF-8 Support Enabled
+DEBUG - 2018-03-09 23:28:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-03-09 23:28:13 --> 404 Page Not Found: Clientes/table
