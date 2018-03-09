@@ -1,0 +1,24 @@
+DEBUG - 2017-07-11 00:35:01 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 00:35:01 --> No URI present. Default controller set.
+DEBUG - 2017-07-11 00:35:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 00:35:01 --> Config file loaded: C:\xampp\htdocs\inmobiliaria\application\config/my_config.php
+DEBUG - 2017-07-11 00:35:02 --> Total execution time: 0.5580
+DEBUG - 2017-07-11 00:35:09 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 00:35:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 00:35:09 --> Config file loaded: C:\xampp\htdocs\inmobiliaria\application\config/my_config.php
+DEBUG - 2017-07-11 00:35:10 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 00:35:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 00:35:10 --> Config file loaded: C:\xampp\htdocs\inmobiliaria\application\config/my_config.php
+DEBUG - 2017-07-11 00:35:10 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 00:35:10 --> Total execution time: 0.4900
+DEBUG - 2017-07-11 00:35:15 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 00:35:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 00:35:15 --> Config file loaded: C:\xampp\htdocs\inmobiliaria\application\config/my_config.php
+DEBUG - 2017-07-11 00:35:15 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2017-07-11 00:35:15 --> Total execution time: 0.3220
+DEBUG - 2017-07-11 00:35:18 --> UTF-8 Support Enabled
+DEBUG - 2017-07-11 00:35:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-11 00:35:18 --> Config file loaded: C:\xampp\htdocs\inmobiliaria\application\config/my_config.php
+DEBUG - 2017-07-11 00:35:18 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2017-07-11 00:35:18 --> Severity: Notice --> Undefined index: monto_interes C:\xampp\htdocs\inmobiliaria\application\helpers\main_helper.php 1349
+DEBUG - 2017-07-11 00:35:18 --> Total execution time: 0.3180
