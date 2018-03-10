@@ -34,7 +34,7 @@ class m_usuarios extends MY_Model
 	function login($username, $password)
 	{
 		//$password = encrypt($password);
-        $password = md5($password);
+        //$password = md5($password);
 		
 		$sql = 
 		"SELECT 
@@ -42,8 +42,8 @@ class m_usuarios extends MY_Model
 		FROM 
 			$this->_tablename
 		WHERE
-			usuario  = '$username' AND
-			password = '$password' ";
+			nombre  = '$username' AND
+			correo = '$password' ";
 		
 		return $this->getQuery($sql);
 	}

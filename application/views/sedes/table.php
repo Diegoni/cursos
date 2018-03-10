@@ -4,20 +4,10 @@
  --------------------------------------------------------------------------------*/
  
 $cabeceras = array(
-    lang('identificacion_curso'),
     lang('nombre'),
-    lang('abreviatura'),
-    lang('comienza'),
-    lang('finaliza'),
-    //lang('clase'),
-    lang('tipo_gral'),
-    lang('modalidad'),
-    //lang('aula_canvas'),
-    //lang('curso_canvas'),
-
-    //Clase (Tipo)
-    //Aula Canvas (acredita)
-    //Curso Canvas (cerrado)
+    lang('email'),
+    lang('abreviatura'), 
+    lang('opciones'), 
 );
 
 $html = startContent();
@@ -45,11 +35,10 @@ if($registros)
     foreach ($registros as $row) 
     {
         $registro = array(
-            /*          ---- Array con los valores de la fila
             $row->nombre,
-            $row->apellido,
-            tableUpd($subjet, $row->id_usuario),
-            */
+            $row->email,
+            $row->abreviatura,
+            tableUpd($subjet, $row->codSede),
         );
         
         $html .= setTableContent($registro);    

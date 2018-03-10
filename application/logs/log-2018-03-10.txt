@@ -1,21 +1,57 @@
-DEBUG - 2018-03-10 14:35:45 --> UTF-8 Support Enabled
-DEBUG - 2018-03-10 14:35:45 --> No URI present. Default controller set.
-DEBUG - 2018-03-10 14:35:45 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2018-03-10 14:35:45 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
-ERROR - 2018-03-10 14:35:45 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'test'@'localhost' (using password: NO) D:\wamp64\www\cursos\system\database\drivers\mysqli\mysqli_driver.php 202
-ERROR - 2018-03-10 14:35:45 --> Unable to connect to the database
-DEBUG - 2018-03-10 14:36:01 --> UTF-8 Support Enabled
-DEBUG - 2018-03-10 14:36:01 --> No URI present. Default controller set.
-DEBUG - 2018-03-10 14:36:01 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2018-03-10 14:36:01 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
-DEBUG - 2018-03-10 14:36:01 --> Total execution time: 0.0822
-DEBUG - 2018-03-10 14:36:27 --> UTF-8 Support Enabled
-DEBUG - 2018-03-10 14:36:27 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2018-03-10 14:36:27 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
-ERROR - 2018-03-10 14:36:27 --> Query error: Unknown column 'usuario' in 'where clause' - Invalid query: SELECT 
-			*
-		FROM 
-			usuarios
-		WHERE
-			usuario  = 'admin' AND
-			password = '405e28906322882c5be9b4b27f4c35fd' 
+DEBUG - 2018-03-10 14:38:37 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:38:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:38:37 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 14:38:37 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:38:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:38:37 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 14:38:37 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:38:37 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:38:37 --> Total execution time: 0.1819
+DEBUG - 2018-03-10 14:38:49 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:38:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-03-10 14:38:49 --> 404 Page Not Found: Cursos/index
+DEBUG - 2018-03-10 14:39:00 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:39:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:39:00 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 14:39:00 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-10 14:39:02 --> Total execution time: 1.4441
+DEBUG - 2018-03-10 14:53:30 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:53:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:53:30 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 14:53:31 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:53:31 --> Could not find the language line "abreviatura"
+ERROR - 2018-03-10 14:53:31 --> Could not find the language line "fechaFin"
+ERROR - 2018-03-10 14:53:31 --> Could not find the language line "tipogral"
+ERROR - 2018-03-10 14:53:31 --> Could not find the language line "modalidad"
+DEBUG - 2018-03-10 14:53:31 --> Total execution time: 0.2989
+DEBUG - 2018-03-10 15:05:11 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:11 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:12 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "identificacion_curso"
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "abreviatura"
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "comienza"
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "finaliza"
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "tipo_gral"
+ERROR - 2018-03-10 15:05:12 --> Could not find the language line "modalidad"
+DEBUG - 2018-03-10 15:05:12 --> Total execution time: 0.4230
+DEBUG - 2018-03-10 15:05:39 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:39 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:39 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-10 15:05:39 --> Total execution time: 0.3950
+DEBUG - 2018-03-10 15:06:16 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:06:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:06:16 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 15:06:16 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-10 15:06:16 --> Total execution time: 0.1579
+DEBUG - 2018-03-10 15:25:19 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:25:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:25:19 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 15:25:19 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-10 15:25:19 --> Total execution time: 0.7692
+DEBUG - 2018-03-10 15:25:22 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:25:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:25:22 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 15:25:22 --> Benchmark class already loaded. Second attempt ignored.
+DEBUG - 2018-03-10 15:25:22 --> Total execution time: 0.1755
