@@ -1,0 +1,21 @@
+DEBUG - 2018-03-10 14:35:45 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:35:45 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:35:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:35:45 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+ERROR - 2018-03-10 14:35:45 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'test'@'localhost' (using password: NO) D:\wamp64\www\cursos\system\database\drivers\mysqli\mysqli_driver.php 202
+ERROR - 2018-03-10 14:35:45 --> Unable to connect to the database
+DEBUG - 2018-03-10 14:36:01 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:36:01 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:36:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:36:01 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+DEBUG - 2018-03-10 14:36:01 --> Total execution time: 0.0822
+DEBUG - 2018-03-10 14:36:27 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:36:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:36:27 --> Config file loaded: D:\wamp64\www\cursos\application\config/my_config.php
+ERROR - 2018-03-10 14:36:27 --> Query error: Unknown column 'usuario' in 'where clause' - Invalid query: SELECT 
+			*
+		FROM 
+			usuarios
+		WHERE
+			usuario  = 'admin' AND
+			password = '405e28906322882c5be9b4b27f4c35fd' 

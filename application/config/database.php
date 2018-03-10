@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'		=> '',
-	'hostname'	=> 'localhost',
-	'username'	=> 'root',
+	'hostname'	=> '192.168.1.20',
+	'username'	=> 'test',
 	'password'	=> '',
-	'database'	=> 'inmobiliaria',
+	'database'	=> 'aden',
 	'dbdriver'	=> 'mysqli',
 	'dbprefix'	=> '',
 	'pconnect'	=> FALSE,
