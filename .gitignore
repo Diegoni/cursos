@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 application/logs
+=======
+application/config/database.php
+>>>>>>> 4282f9ed8accc0d2ad8a500a080368a579ba5ea4
