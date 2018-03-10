@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Gestión</title>
+    <title><?php echo config_item('programa')?></title>
     <?php
     echo setCss('plugins/select2/select2.min.css');
     

@@ -141,7 +141,8 @@ class Login extends CI_Controller
 				$sess_array = array(
 				    'id_usuario'   => $row->codUsuario,
 				    'usuario' 	   => $row->nombre,
-					'id_rol'	   => $row->rol,
+					//'id_rol'	   => $row->rol,
+					'id_rol'	   => 1,
 					'last_login'   => $row->acceso,
 					'nombre'       => $row->nombre,
 					//'apellido'     => $row->apellido,

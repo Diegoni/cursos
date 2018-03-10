@@ -262,3 +262,305 @@ DEBUG - 2018-03-10 14:30:19 --> Config file loaded: C:\xampp\htdocs\cursos2\appl
 DEBUG - 2018-03-10 14:30:19 --> Benchmark class already loaded. Second attempt ignored.
 ERROR - 2018-03-10 14:30:19 --> Could not find the language line "abreviatura"
 DEBUG - 2018-03-10 14:30:19 --> Total execution time: 0.2760
+DEBUG - 2018-03-10 14:31:29 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:31:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:31:29 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:31:29 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:31:29 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:31:29 --> Total execution time: 0.1930
+DEBUG - 2018-03-10 14:33:12 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:33:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:33:12 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:33:12 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:33:12 --> Could not find the language line "abreviatura"
+ERROR - 2018-03-10 14:33:12 --> Severity: Notice --> Undefined property: CI_Loader::$item C:\xampp\htdocs\cursos2\application\views\plantilla\footer.php 17
+ERROR - 2018-03-10 14:33:12 --> Severity: Error --> Call to a member function config() on a non-object C:\xampp\htdocs\cursos2\application\views\plantilla\footer.php 17
+DEBUG - 2018-03-10 14:34:02 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:34:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:34:03 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:34:03 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:34:03 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:34:03 --> Total execution time: 0.3650
+DEBUG - 2018-03-10 14:35:16 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:35:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:35:16 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:35:16 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:35:16 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:35:16 --> Total execution time: 0.1470
+DEBUG - 2018-03-10 14:35:24 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:35:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:35:24 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:35:24 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:35:24 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:35:24 --> Total execution time: 0.1600
+DEBUG - 2018-03-10 14:48:24 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:48:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:48:24 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:48:24 --> Severity: error --> Exception: C:\xampp\htdocs\cursos2\application\models/M_usuarios.php exists, but doesn't declare class M_usuarios C:\xampp\htdocs\cursos2\system\core\Loader.php 336
+DEBUG - 2018-03-10 14:48:46 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:48:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:48:46 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:48:46 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:48:46 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:48:46 --> Total execution time: 0.1750
+DEBUG - 2018-03-10 14:48:49 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:48:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:48:49 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:48:49 --> Severity: error --> Exception: C:\xampp\htdocs\cursos2\application\models/M_usuarios.php exists, but doesn't declare class M_usuarios C:\xampp\htdocs\cursos2\system\core\Loader.php 336
+DEBUG - 2018-03-10 14:49:12 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:49:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:49:12 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:49:12 --> Total execution time: 0.2230
+DEBUG - 2018-03-10 14:49:13 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:49:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:49:14 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:49:14 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:49:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:49:14 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:49:14 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:49:14 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:49:14 --> Total execution time: 0.1690
+DEBUG - 2018-03-10 14:51:16 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:51:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:51:16 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:51:16 --> Total execution time: 0.1320
+DEBUG - 2018-03-10 14:51:17 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:51:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:51:17 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:51:17 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:51:17 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:51:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:51:17 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:51:18 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:51:18 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:51:18 --> Total execution time: 0.1630
+DEBUG - 2018-03-10 14:53:57 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:53:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:53:57 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:53:58 --> Total execution time: 0.1620
+DEBUG - 2018-03-10 14:53:59 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:53:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:53:59 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:53:59 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:53:59 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:53:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:53:59 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:53:59 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:53:59 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:53:59 --> Total execution time: 0.1350
+DEBUG - 2018-03-10 14:56:30 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:56:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:56:30 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:56:30 --> Total execution time: 0.2120
+DEBUG - 2018-03-10 14:56:31 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:56:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:56:31 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:56:31 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:56:31 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:56:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:56:31 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:56:31 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:56:32 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:56:32 --> Total execution time: 0.1640
+DEBUG - 2018-03-10 14:59:50 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:59:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:59:50 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:59:50 --> Total execution time: 0.1500
+DEBUG - 2018-03-10 14:59:51 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:59:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:59:51 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:59:52 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:59:52 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:59:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:59:52 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:59:52 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:59:52 --> Severity: Notice --> Undefined variable: array_menus C:\xampp\htdocs\cursos2\application\views\plantilla\menu-left.php 105
+ERROR - 2018-03-10 14:59:52 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\cursos2\application\views\plantilla\menu-left.php 105
+ERROR - 2018-03-10 14:59:52 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:59:52 --> Total execution time: 0.1470
+DEBUG - 2018-03-10 15:00:46 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:00:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:00:46 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:00:47 --> Total execution time: 0.2800
+DEBUG - 2018-03-10 15:00:48 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:00:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:00:48 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:00:48 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 15:00:48 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:00:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:00:48 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:00:48 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:00:48 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:00:48 --> Total execution time: 0.2230
+DEBUG - 2018-03-10 15:00:54 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:00:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-03-10 15:00:54 --> 404 Page Not Found: Animales/table
+DEBUG - 2018-03-10 15:00:56 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:00:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:00:56 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:00:56 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:00:56 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:00:56 --> Total execution time: 0.1850
+DEBUG - 2018-03-10 15:02:00 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:02:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:02:00 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:02:00 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:02:00 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:02:00 --> Total execution time: 0.1520
+DEBUG - 2018-03-10 15:02:45 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:02:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:02:45 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:02:45 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:02:46 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:02:46 --> Total execution time: 0.1670
+DEBUG - 2018-03-10 15:02:50 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:02:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-03-10 15:02:50 --> 404 Page Not Found: Seguimientos/table
+DEBUG - 2018-03-10 15:03:08 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:03:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:03:08 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:03:08 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:03:08 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:03:08 --> Total execution time: 0.1850
+DEBUG - 2018-03-10 15:03:13 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:03:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:03:13 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:03:13 --> Total execution time: 0.4320
+DEBUG - 2018-03-10 15:03:16 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:03:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:03:16 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:03:16 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 15:03:16 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:03:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:03:16 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:03:16 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:03:16 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:03:16 --> Total execution time: 0.1720
+DEBUG - 2018-03-10 15:04:31 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:04:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:04:31 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:04:32 --> Total execution time: 0.3360
+DEBUG - 2018-03-10 15:04:33 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:04:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:04:33 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:04:33 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 15:04:33 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:04:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:04:33 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:04:33 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:04:34 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:04:34 --> Total execution time: 0.1810
+DEBUG - 2018-03-10 15:04:59 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:04:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:04:59 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:04:59 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:04:59 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:04:59 --> Total execution time: 0.1580
+DEBUG - 2018-03-10 15:05:52 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:52 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:52 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:05:53 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:05:53 --> Total execution time: 0.4530
+DEBUG - 2018-03-10 15:05:56 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:56 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:56 --> Total execution time: 0.2330
+DEBUG - 2018-03-10 15:05:57 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:57 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:57 --> 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '1' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 15:05:58 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 15:05:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 15:05:58 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 15:05:58 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 15:05:58 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 15:05:58 --> Total execution time: 0.1890
