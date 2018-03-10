@@ -7,3 +7,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ---------------------------------------------------------------------------------*/
 
 $config['programa']             = 'colegio-notarial';
+$config['vista_inicial']        = 'sedes/table';

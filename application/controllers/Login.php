@@ -118,7 +118,7 @@ class Login extends CI_Controller
             
 			$this->m_logs_usuarios->insert($registro);
             
-            redirect('/clientes/table/','refresh');    
+            redirect($this->config->item('vista_inicial'), 'refresh');    
 	  	}
 	}
     
@@ -139,13 +139,15 @@ class Login extends CI_Controller
 		if($result){
 		    foreach($result as $row){
 				$sess_array = array(
-				    'id_usuario'   => $row->id_usuario,
-				    'usuario' 	   => $row->usuario,
-					'id_rol'	   => $row->id_perfil,
-					'last_login'   => $row->last_login,
+				    'id_usuario'   => $row->codUsuario,
+				    'usuario' 	   => $row->nombre,
+					'id_rol'	   => $row->rol,
+					'last_login'   => $row->acceso,
 					'nombre'       => $row->nombre,
-					'apellido'     => $row->apellido,
-					'eliminado'    => $row->eliminado,
+					//'apellido'     => $row->apellido,
+					//'eliminado'    => $row->eliminado,
+					'apellido'     => '',
+					'eliminado'    => 0,
 		    	);
 			}
             

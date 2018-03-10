@@ -1,0 +1,264 @@
+DEBUG - 2018-03-10 13:58:46 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 13:58:46 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 13:58:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 13:58:46 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 13:58:47 --> Total execution time: 0.6490
+DEBUG - 2018-03-10 13:59:56 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 13:59:56 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 13:59:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 13:59:56 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 13:59:56 --> Total execution time: 0.0550
+DEBUG - 2018-03-10 14:00:03 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:00:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:00:03 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:00:03 --> Query error: Unknown column 'usuario' in 'where clause' - Invalid query: SELECT 
+			*
+		FROM 
+			usuarios
+		WHERE
+			usuario  = 'admin' AND
+			password = '405e28906322882c5be9b4b27f4c35fd' 
+DEBUG - 2018-03-10 14:00:44 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:00:44 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:00:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:00:44 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:00:44 --> Total execution time: 0.0440
+DEBUG - 2018-03-10 14:01:40 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:01:40 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:01:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:01:40 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:01:40 --> Total execution time: 0.0510
+DEBUG - 2018-03-10 14:02:19 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:02:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:02:19 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:02:19 --> Query error: Unknown column 'usuario' in 'where clause' - Invalid query: SELECT 
+			*
+		FROM 
+			usuarios
+		WHERE
+			usuario  = 'admin' AND
+			password = '405e28906322882c5be9b4b27f4c35fd' 
+DEBUG - 2018-03-10 14:04:43 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:04:43 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:04:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:04:43 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:04:43 --> Total execution time: 0.0470
+DEBUG - 2018-03-10 14:04:45 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:04:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:04:45 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:04:45 --> Query error: Unknown column 'usuario' in 'where clause' - Invalid query: SELECT 
+			*
+		FROM 
+			usuarios
+		WHERE
+			usuario  = 'admin' AND
+			password = '405e28906322882c5be9b4b27f4c35fd' 
+DEBUG - 2018-03-10 14:06:33 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:06:33 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:06:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:06:33 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:06:33 --> Total execution time: 0.0520
+DEBUG - 2018-03-10 14:06:34 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:06:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:06:34 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$id_usuario C:\xampp\htdocs\cursos2\application\controllers\Login.php 142
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$usuario C:\xampp\htdocs\cursos2\application\controllers\Login.php 143
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$id_perfil C:\xampp\htdocs\cursos2\application\controllers\Login.php 144
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$last_login C:\xampp\htdocs\cursos2\application\controllers\Login.php 145
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$apellido C:\xampp\htdocs\cursos2\application\controllers\Login.php 147
+ERROR - 2018-03-10 14:06:35 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:06:35 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+ERROR - 2018-03-10 14:06:35 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\cursos2\system\core\Exceptions.php:272) C:\xampp\htdocs\cursos2\system\core\Common.php 573
+DEBUG - 2018-03-10 14:07:32 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:07:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:07:32 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:07:32 --> Severity: Notice --> Undefined property: stdClass::$usuario C:\xampp\htdocs\cursos2\application\controllers\Login.php 143
+ERROR - 2018-03-10 14:07:32 --> Severity: Notice --> Undefined property: stdClass::$id_perfil C:\xampp\htdocs\cursos2\application\controllers\Login.php 144
+ERROR - 2018-03-10 14:07:32 --> Severity: Notice --> Undefined property: stdClass::$last_login C:\xampp\htdocs\cursos2\application\controllers\Login.php 145
+ERROR - 2018-03-10 14:07:32 --> Severity: Notice --> Undefined property: stdClass::$apellido C:\xampp\htdocs\cursos2\application\controllers\Login.php 147
+ERROR - 2018-03-10 14:07:32 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:07:32 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+ERROR - 2018-03-10 14:07:32 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\cursos2\system\core\Exceptions.php:272) C:\xampp\htdocs\cursos2\system\core\Common.php 573
+DEBUG - 2018-03-10 14:07:40 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:07:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:07:40 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:07:40 --> Severity: Notice --> Undefined property: stdClass::$id_perfil C:\xampp\htdocs\cursos2\application\controllers\Login.php 144
+ERROR - 2018-03-10 14:07:40 --> Severity: Notice --> Undefined property: stdClass::$last_login C:\xampp\htdocs\cursos2\application\controllers\Login.php 145
+ERROR - 2018-03-10 14:07:40 --> Severity: Notice --> Undefined property: stdClass::$apellido C:\xampp\htdocs\cursos2\application\controllers\Login.php 147
+ERROR - 2018-03-10 14:07:40 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:07:40 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:07:49 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:07:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:07:49 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:07:49 --> Severity: Notice --> Undefined property: stdClass::$last_login C:\xampp\htdocs\cursos2\application\controllers\Login.php 145
+ERROR - 2018-03-10 14:07:49 --> Severity: Notice --> Undefined property: stdClass::$apellido C:\xampp\htdocs\cursos2\application\controllers\Login.php 147
+ERROR - 2018-03-10 14:07:49 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:07:49 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:08:02 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:08:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:08:02 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:08:02 --> Severity: Notice --> Undefined property: stdClass::$apellido C:\xampp\htdocs\cursos2\application\controllers\Login.php 147
+ERROR - 2018-03-10 14:08:02 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:08:02 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:08:10 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:08:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:08:10 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:08:10 --> Severity: Notice --> Undefined property: stdClass::$eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 148
+ERROR - 2018-03-10 14:08:10 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:08:15 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:08:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:08:15 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:08:15 --> Severity: Notice --> Undefined index: eliminado C:\xampp\htdocs\cursos2\application\controllers\Login.php 152
+ERROR - 2018-03-10 14:08:15 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:09:00 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:09:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:09:00 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:09:00 --> Query error: Table 'aden.usuarios_permisos' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:10:09 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:10:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:10:09 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:10:09 --> Query error: Table 'aden.menus' doesn't exist - Invalid query: 
+        SELECT 
+            * 
+        FROM 
+            usuarios_permisos 
+        INNER JOIN 
+            menus ON(usuarios_permisos.id_menu = menus.id_menu) 
+        WHERE 
+            (usuarios_permisos.id_perfil = '' AND
+            usuarios_permisos.eliminado = '0')
+        ORDER BY
+            menus.menu
+DEBUG - 2018-03-10 14:11:27 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:11:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:11:27 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+ERROR - 2018-03-10 14:11:27 --> Query error: Table 'aden.logs_usuarios' doesn't exist - Invalid query: SHOW COLUMNS FROM `logs_usuarios`
+DEBUG - 2018-03-10 14:12:50 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:12:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:12:50 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:12:50 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:12:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2018-03-10 14:12:50 --> 404 Page Not Found: Clientes/table
+DEBUG - 2018-03-10 14:19:36 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:19:36 --> No URI present. Default controller set.
+DEBUG - 2018-03-10 14:19:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:19:36 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:19:36 --> Total execution time: 0.0560
+DEBUG - 2018-03-10 14:19:38 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:19:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:19:38 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:19:38 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:19:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:19:38 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:19:38 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:19:39 --> Severity: Notice --> Undefined index: permisos C:\xampp\htdocs\cursos2\application\views\plantilla\menu-left.php 14
+ERROR - 2018-03-10 14:19:39 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:19:39 --> Total execution time: 0.9481
+DEBUG - 2018-03-10 14:20:57 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:20:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:20:57 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:20:57 --> Total execution time: 0.2110
+DEBUG - 2018-03-10 14:21:00 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:21:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:21:00 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:21:00 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:21:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:21:00 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:21:00 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:21:00 --> Severity: Notice --> Undefined index: permisos C:\xampp\htdocs\cursos2\application\views\plantilla\menu-left.php 14
+ERROR - 2018-03-10 14:21:00 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:21:00 --> Total execution time: 0.1620
+DEBUG - 2018-03-10 14:30:19 --> UTF-8 Support Enabled
+DEBUG - 2018-03-10 14:30:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2018-03-10 14:30:19 --> Config file loaded: C:\xampp\htdocs\cursos2\application\config/my_config.php
+DEBUG - 2018-03-10 14:30:19 --> Benchmark class already loaded. Second attempt ignored.
+ERROR - 2018-03-10 14:30:19 --> Could not find the language line "abreviatura"
+DEBUG - 2018-03-10 14:30:19 --> Total execution time: 0.2760

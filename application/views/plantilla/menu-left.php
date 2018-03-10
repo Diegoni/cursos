@@ -11,7 +11,7 @@
                 $url = $this->uri->segment(1).'/'.$this->uri->segment(2).'/';
                 $active = 0;
                 
-                if($session['permisos'])
+                if(isset($session['permisos']))
                 {
                     foreach ($session['permisos'] as $row) 
                     {
