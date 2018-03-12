@@ -12,7 +12,7 @@ class Cursos extends MY_Controller
             $model      = $this->_model 
         );
         
-        $this->load->model($this->_model, 'model'); // Linea obligatoria
+        $this->load->model($this->_model, 'model');
     } 
     
     
@@ -25,14 +25,18 @@ class Cursos extends MY_Controller
 ---------------------------------------------------------------------------------*/   
     
     
-    function abm($id = NULL)                              // Funcion para abm
-    {                           
+    function abm($id = NULL)
+    {
         $db['campos']   = array(
-            array('campo',    'restricciones', 'tags'), // cargar un input
-            array('checkbox', 'campo'),                 // cargar un checkbox
+            array('nombre', '', 'required'),
+            array('abreviatura', '', ''),
+            array('fecha', '', ''),
+            array('fechaFin', '', ''),
+            array('tipogral', '', ''),
+            array('modalidad', '', ''),
         );
 
-        $this->armarAbm($id, $db);                     // Envia todo a la plantilla de la pagina
+        $this->armarAbm($id, $db);
     }
 }
 ?>
