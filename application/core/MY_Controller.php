@@ -274,14 +274,14 @@ class MY_Controller extends CI_Controller
             }
             
             $db['permiso_editar'] = 0;
-            
-            if(isset($db['session']['permisos']))
+			
+			if(isset($db['session']['permisos']))
             {
                 foreach ($db['session']['permisos'] as $key => $value) 
                 {
                     if(strtolower($this->_subject.'/'.$_vista.'/') == strtolower($value['url']) && $value['ver'] == 1)
                     {
-                        $permiso = 1;  
+                    	$permiso = 1;  
                         $db['permiso_editar'] =  $value['editar'];
                     } 
                 }    
