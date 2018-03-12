@@ -49,6 +49,8 @@ class m_usuarios_permisos extends MY_Model
             $this->_tablename.eliminado = '0')
         ORDER BY
             menus.menu";
+			
+		log_message('debug', $sql);
 
         return $this->getQuery($sql);
     }
