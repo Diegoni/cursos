@@ -45,14 +45,21 @@ if($registros)
     foreach ($registros as $row) 
     {
         $registro = array(
+            $row->id,
+            $row->nombre,
+            $row->abreviatura,
+            $row->fecha,
+            $row->fechaFin,
+            $row->tipogral,
+            $row->modalidad
             /*          ---- Array con los valores de la fila
             $row->nombre,
             $row->apellido,
             tableUpd($subjet, $row->id_usuario),
             */
         );
-        
-        $html .= setTableContent($registro);    
+
+        $html .= setTableContent($registro);
     }
 }
             
