@@ -54,4 +54,8 @@ echo $html;
 <script>
 $("[data-inputmask]").inputmask();
 $(".checkbox").bootstrapSwitch();
+(function() {
+    $('#label_fecha').text("Comienza");
+    $('#fecha').attr("placeholder", "Comienza");
+}());
 </script>

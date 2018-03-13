@@ -66,10 +66,13 @@
 	margin: 0 0 0px;
 }
 
-
-
 .div_archivo{
 	background-color:#CBC9FF;
 	height:400px;
 	overflow: auto;
+}
+
+.botones_acciones{
+	padding-bottom: 5px;
+	padding-right: 0px;
 }

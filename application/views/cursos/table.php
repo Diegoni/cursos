@@ -10,7 +10,7 @@ $cabeceras = array(
     lang('comienza'),
     lang('finaliza'),
     //lang('clase'),
-    lang('tipo_gral'),
+    lang('tipogral'),
     lang('modalidad'),
     //lang('aula_canvas'),
     //lang('curso_canvas'),

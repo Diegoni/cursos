@@ -13,7 +13,7 @@ class Cursos extends MY_Controller
         );
         
         $this->load->model($this->_model, 'model');
-    } 
+    }
     
     
 /*--------------------------------------------------------------------------------- 
@@ -29,11 +29,11 @@ class Cursos extends MY_Controller
     {
         $db['campos']   = array(
             array('nombre', '', 'required'),
+            array('modalidad', '', 'required'),
             array('abreviatura', '', ''),
             array('fecha', '', ''),
             array('fechaFin', '', ''),
             array('tipogral', '', ''),
-            array('modalidad', '', ''),
         );
 
         $this->armarAbm($id, $db);

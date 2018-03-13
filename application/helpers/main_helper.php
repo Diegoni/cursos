@@ -535,7 +535,7 @@ function btnModal($id)
 function getModal($id, $mensaje)
 {
 	
-	$modal = '<div class="modal fade" id="'.$id.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
+	$modal =  '<div class="modal fade" id="'.$id.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
 	$modal .= '<div class="modal-dialog" role="document">';
 	$modal .= '<div class="modal-content">';
 	$modal .= '<div class="modal-header">';
@@ -581,15 +581,13 @@ function getExportsButtons($cabeceras, $button = NULL, $id_table = NULL)
 	
 	$return .= 	
 	'<div class="col-md-6"></div>
-	<div class="col-md-6" style=" padding-bottom: 5px;">
+	 <div class="col-md-6 botones_acciones">
 		<form action="'.$url.'" method="post" target="_blank" id="FormularioExportacion" class="pull-right">
 			<input id="export" name="export" type="hidden">
 			<button class="btn btn-default botonExcel" name="pdf" 	value="pdf"><i class="fa fa-file-pdf-o"></i> PDF</button>
 			<button class="btn btn-default botonExcel" name="excel" value="excel"><i class="fa fa-file-excel-o"></i> Excel</button>
-			<button class="btn btn-default botonExcel" name="print" value="print"><i class="fa fa-print"></i> Imprimir</button> 	
-			 ';
-	
-	
+			<button class="btn btn-default botonExcel" name="print" value="print"><i class="fa fa-print"></i> Imprimir</button>';
+
 	foreach ($cabeceras as $cabecera) {
 		if(is_array($cabecera)){
 			foreach ($cabecera as $key => $value) {
@@ -1630,8 +1628,8 @@ function getBootstrapSwitch($valor, $id, $function, $set_disabled = 1)
 function getSizes()
 {
     $sizes = array(
-        'label'     => 1,
-        'input'     => 5,
+        'label'     => 2,
+        'input'     => 8,
     );
     
     return $sizes;
