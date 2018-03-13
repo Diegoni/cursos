@@ -38,5 +38,41 @@ class Cursos extends MY_Controller
 
         $this->armarAbm($id, $db);
     }
+	
+
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+        Función para armar las vistas de tablas
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/
+
+ 	function table($mensaje = NULL, $db = NULL)
+    {
+    	if($mensaje != NULL) 
+        {
+            $db['mensaje'] = $mensaje;
+        }
+		
+		$session = $this->session->userdata('logged_in');
+		
+		if(isset($session['sede']))
+		{
+			$db['registros']   = $this->model->getRegistros($session['sede']['codSede'], 'sede');
+			}else
+		{
+			$db['registros']   = $this->model->getRegistros();
+		}	
+        
+        
+        $this->armarVista('table', $db);
+ 	}
+
+    function tabla($mensaje = NULL)
+    {
+        
+    }
+
 }
 ?>

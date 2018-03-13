@@ -1631,7 +1631,7 @@ function getSizes()
 {
     $sizes = array(
         'label'     => 1,
-        'input'     => 5,
+        'input'     => 4,
     );
     
     return $sizes;

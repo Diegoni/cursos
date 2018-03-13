@@ -79,9 +79,24 @@
                         
                         
                         $comienzo .= '<a href="#">
-                                            <i class="'.$icon.'"></i>
-                                            <span>'.$row_categoria['menu'].'</span>
-                                            <i class="fa fa-angle-left pull-right"></i>
+                                            <i class="'.$icon.'"></i>';
+                                            
+                                            if($row_categoria['menu'] == 'Sede')
+                                            {
+                                            	if(isset($session['sede']))
+                                            	{
+                                            		$comienzo .= '<span>'.$row_categoria['menu'].' '.$session['sede']['nombre'].'</span>';
+                                            	}else
+                                            	{
+                                            		$comienzo .= '<span>'.$row_categoria['menu'].'</span>';
+                                            	}
+                                            }else
+                                            {
+                                            	 $comienzo .= '<span>'.$row_categoria['menu'].'</span>';
+                                            }
+                                            
+                                            
+                        $comienzo .= '		<i class="fa fa-angle-left pull-right"></i>
                                           </a>';
                        $comienzo .= '<ul class="treeview-menu menu-open">'; 
                            
