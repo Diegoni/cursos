@@ -39,7 +39,7 @@ if($registros)
             $row->nombre,
             $row->email,
             $row->abreviatura,
-            tableUpd($subjet, $row->codSede),
+            tableUpd($subjet, $row->codSede).' '.tableButton('sedes/seleccion', $row->codSede, 'fa fa-arrow-right', lang('seleccionar')),
         );
         
         $html .= setTableContent($registro);    

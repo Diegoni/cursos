@@ -39,6 +39,7 @@ if(isset($mensaje))
  
 $html .= '<form action="#" method="post" class="form-horizontal">';
 $html .= setForm($campos, $registro_values, $registro, $id_table);
+$html .= '<input name="sede" value="'.$session['sede']['codSede'].'" type="hidden">';    
 $html .= '</form>';
 
 

@@ -12,8 +12,7 @@ class Sedes extends MY_Controller
             $model      = $this->_model 
         );
         
-        $this->load->model($this->_model, 'model'); // Linea obligatoria  
-       // $this->load->model('m_otrom');              // Carga de otro modelo necesario
+        $this->load->model($this->_model, 'model');
     } 
     
     
@@ -26,17 +25,37 @@ class Sedes extends MY_Controller
 ---------------------------------------------------------------------------------*/   
     
     
-    function abm($id = NULL)                              // Funcion para abm
-    {                           
-        $db['otrom']    = $this->m_otrom->getRegistros(); // Carga para el select
-        
-        $db['campos']   = array(
-            array('campo',    'restricciones', 'tags'), // cargar un input
-            array('select',   'id_campo',  'campo', $db['otromodelo']), // cargar un select
-            array('checkbox', 'campo'),                 // cargar un checkbox
-        );
+    function abm($id = NULL)
+    {
+    	$db['campos']   = array(
+			array('nombre',    '', 'required'), 
+			array('direccion',    '', 'required'), 
+			array('telefono',    '', 'required'), 
+			array('email',    '', 'required'), 
+			array('abreviatura',    '', 'required'), 
+			
+	    );
         
         $this->armarAbm($id, $db);                     // Envia todo a la plantilla de la pagina
     }
+	
+	
+	function seleccion($id)
+	{
+		$registros = $this->model->getRegistros($id);
+		
+		foreach ($registros as $row) 
+		{
+			$sede['nombre'] = $row->nombre;
+			$sede['codSede'] = $row->codSede;
+		}
+		
+		$session = $this->session->userdata('logged_in');
+		
+		$session['sede'] = $sede;
+		
+		$this->session->set_userdata('logged_in', $session);
+		redirect($this->_subject.'/table/', 'refresh');
+	}
 }
 ?>
