@@ -98,7 +98,7 @@
                 <div class="box-body actions-buttons">
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-edit-curso">Editar <span class="glyphicon glyphicon-pencil"></span></button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Estado Inscr Alumnos </button></p>
-                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Inscribir Alumnos <span class="glyphicon glyphicon-education"></span></button></p>
+                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-inscribir-alumnos">Inscribir Alumnos <span class="glyphicon glyphicon-education"></span></button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Fecha/Sem Teoricas <span class="glyphicon glyphicon-calendar"></span></button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Cronogramas</span></button></p>
                     <p><a class="btn btn-default <?php echo (empty($curso_canvas)) ? 'disabled' : ''; ?>" href="<?php echo (empty($curso_canvas)) ? '#' : 'https://aden.instructure.com/courses/'.$curso_canvas; ?>" target="_blank" role="button" aria-pressed="true"><?php echo lang('ven_en_canvas'); ?> <img src="https://www.aden.org/sis_test/assets/images/canvas_icon.png"></a></p>
@@ -290,6 +290,38 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary" name="guardar_curso" value="1">Guardar</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal-inscribir-alumnos" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" method="post">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title">Inscripción Alumnos</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputNombre" class="col-xs-2 col-sm-3 control-label"><?php echo lang('nombre'); ?></label>
+                        <div class="col-xs-10 col-sm-8">
+                            <input type="text" class="form-control" id="inputNombre" name="curso_nombre" placeholder="<?php echo lang('nombre'); ?>" value="<?php echo $nombre; ?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectInscAlumnos" class="col-xs-2 col-sm-3 control-label"><?php echo lang('tutor'); ?></label>
+                        <div class="col-xs-10 col-sm-8">
+                            <select multiple="multiple" id="selectInscAlumnos" name="curso_inscr_alumno[]">
+                                
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div><!-- /.modal-content -->
