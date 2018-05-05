@@ -133,9 +133,10 @@ function setDatatables($id_table = NULL, $order = NULL, $url = NULL)
         $(this).html( '<input class=".$cor."form-control input-sm".$cor." type=".$cor."text".$cor." placeholder=".$cor."'+title+'".$cor." style=".$cor."width: 75%".$cor.";/>' );
     } );; ";
     
-    $data = setCss('plugins/datatables/dataTables.bootstrap.css'); 
-	$data .= setJs('plugins/datatables/jquery.dataTables.min.js');
-	$data .= setJs('plugins/datatables/dataTables.bootstrap.min.js');
+    $data = '';
+    //$data = setCss('plugins/datatables/dataTables.bootstrap.css'); 
+	//$data .= setJs('plugins/datatables/jquery.dataTables.min.js');
+	//$data .= setJs('plugins/datatables/dataTables.bootstrap.min.js');
 
 	$data .=
 	'<script>

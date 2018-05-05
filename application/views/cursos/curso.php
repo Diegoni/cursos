@@ -315,4 +315,8 @@
         checkboxClass: 'icheckbox_minimal',
         radioClass: 'iradio_minimal',
     });
+    // init datepicker
+    $('.date').datepicker({
+        format: 'yyyy-mm-dd'
+    });
 </script>
