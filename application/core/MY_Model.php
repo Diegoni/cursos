@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 class MY_Model extends CI_Model 
 {
 	protected $_tablename	= '';
@@ -40,8 +40,8 @@ class MY_Model extends CI_Model
 		// SI no existe el campo eliminado lo creamos
 		if(!$this->db->field_exists('eliminado', $this->_tablename))
 		{
-			$add = "ALTER TABLE $this->_tablename ADD `eliminado` TINYINT NOT NULL";
-			$this->db->query($add);
+		//	$add = "ALTER TABLE $this->_tablename ADD `eliminado` TINYINT NOT NULL";
+		//	$this->db->query($add);
 		}
 		// No viene el campo id, trae todos los registros que no esten eliminados
 		if($id != NULL)
@@ -71,11 +71,12 @@ class MY_Model extends CI_Model
 			
 			if($id != 'all')
 			{
-                $sql .= " AND $this->_tablename.eliminado = 0 ";
+                //$sql .= " AND $this->_tablename.eliminado = 0 ";
+                $sql .= " ";
             }  
 		}else
 		{
-			$sql .= " WHERE $this->_tablename.eliminado = 0 ";
+			$sql .= "";
 		}
 		
         // Varios campos para ordenar
@@ -97,6 +98,8 @@ class MY_Model extends CI_Model
 		{
 			$sql .= "ORDER BY $this->_tablename.$this->_id_table";
 		}
+		
+		//echo $sql.'<br>';
 		
 		return $this->getQuery($sql);
 	}
@@ -134,7 +137,7 @@ class MY_Model extends CI_Model
 			$where = '';
 		}
 		
-		$sql .= "WHERE $this->_tablename.eliminado = 0";
+		//$sql .= "WHERE $this->_tablename.eliminado = 0";
 		$sql .= $where;
 		$sql .= 
 		"ORDER BY
@@ -155,11 +158,29 @@ class MY_Model extends CI_Model
 ---------------------------------------------------------------------------------*/
 
 	
-	function getCantidad()
+	function getCount($where = NULL)
 	{
 		$sql = $this->getSelect();
 		
-		$sql .= "WHERE $this->_tablename.eliminado = 0";
+		if($where == NULL)
+		{
+			//$sql .= "WHERE $this->_tablename.eliminado = 0";
+			$sql .= "";
+		}else
+		{
+			if(is_array($where))
+			{
+				$sql .= " WHERE ";
+                foreach ($where as $_campo => $_valor) 
+                {
+                	$sql .= $_valor.' AND ';
+				} 
+                $sql = substr($sql, 0, -4);
+			}else
+			{
+				$sql .= "WHERE $where ";
+			}
+		}
 					
 		$query = $this->db->query($sql);
 					

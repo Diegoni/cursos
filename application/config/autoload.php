@@ -58,7 +58,13 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'session');
+$autoload['libraries'] = array(
+    'database',
+    'form_validation',
+    'session',
+    'autenticar',
+    'menu',
+);
 
 /*
 | -------------------------------------------------------------------
@@ -72,6 +78,12 @@ $autoload['libraries'] = array('database', 'session');
 | Prototype:
 |
 |	$autoload['drivers'] = array('cache');
+|
+| You can also supply an alternative property name to be assigned in
+| the controller:
+|
+|	$autoload['drivers'] = array('cache' => 'cch');
+|
 */
 $autoload['drivers'] = array();
 
@@ -83,8 +95,16 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('main', 'url', 'language', 'function');
-
+$autoload['helper'] = array(
+    'form',
+    'url',
+    'autenticar',
+    'interfaz',
+    'main',
+    'language',
+    'function',
+    'aden',
+);
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files
@@ -97,7 +117,7 @@ $autoload['helper'] = array('main', 'url', 'language', 'function');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('my_config');
+$autoload['config'] = array();
 
 /*
 | -------------------------------------------------------------------
@@ -111,7 +131,7 @@ $autoload['config'] = array('my_config');
 | "codeigniter_lang.php" would be referenced as array('codeigniter');
 |
 */
-$autoload['language'] = array('main', 'alertas', 'aden');
+$autoload['language'] = array('main', 'aden');
 
 /*
 | -------------------------------------------------------------------
@@ -126,4 +146,9 @@ $autoload['language'] = array('main', 'alertas', 'aden');
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = [
+    'cursos_model',
+    'm_personas',
+    'sedes_model',
+    'm_usuarios'
+];
