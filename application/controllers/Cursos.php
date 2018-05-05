@@ -75,8 +75,8 @@ class Cursos extends MY_Controller
 ----------------------------------------------------------------------------------- 
 ---------------------------------------------------------------------------------*/   
 
-    function curso($id = NULL) {
-
+    function curso($id = NULL) 
+    {
         $registros = $this->model->getRegistros($id);
 
         if(!isset($registros)) {
@@ -126,5 +126,38 @@ class Cursos extends MY_Controller
 
         $this->armarVista('curso', $db);
     }
+
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+       Datos de un curso
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+    function buscarAlumnos() 
+    {
+    	$buscar_alumno = $this->input->post('buscar_alumnos');
+		
+		$alumnos = $this->m_alumnos->getAlumnos($buscar_alumno);
+		
+		$array_alumnos = array();
+		
+		if($alumnos)
+		{
+			
+			foreach ($alumnos as $row) 
+			{
+				$array_alumnos[] = array(
+					'codpersona'=> $row->codpersona,
+					'nombre'	=> $row->nombre,
+					'apellido'	=> $row->apellido,
+				);
+			}
+		}
+		
+		echo json_encode($array_alumnos);
+		
+	}
 }
 ?>
