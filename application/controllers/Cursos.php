@@ -142,13 +142,14 @@ class Cursos extends MY_Controller
 		$alumnos = $this->m_alumnos->getAlumnos($buscar_alumno);
 		
 		$array_personas = array();
-		
+		$array_alumnos = array();
+
 		if($alumnos)
 		{
 			
 			foreach ($alumnos as $row) 
 			{
-				if(!in_array($row_alumnos->codpersona, $array_personas))
+				if(!in_array($row->codpersona, $array_personas))
 				{
 					$array_personas[] = $row->codpersona;
 					

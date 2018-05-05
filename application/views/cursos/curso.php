@@ -354,16 +354,35 @@
     $('.date').datepicker({
         format: 'yyyy-mm-dd'
     });
+    // init multiselect
+    $('#selectInscAlumnos').multiSelect();
     
     var buscarAlumnos = function() {
         var search = $('#inputBuscarAlumnos').val();
         var url = '<?=BASEURL?>cursos/buscarAlumnos';
 
-        var promise = $.post(url, { buscar_alumnos: search }, null, 'json');
-        
-        promise.done(function(data) {
-            console.log(data);
+        var select = $('#selectInscAlumnos')[0];
+
+        var promise = $.post(url, { buscar_alumnos: search }, function(datos) {
+            // append data
+            datos.forEach(function(persona) {
+                var option = document.createElement("option");
+                option.text = persona.nombre + " " + persona.apellido;
+                option.value = persona.codpersona;
+                select.appendChild(option);
+            });
+            // refresh select
+            $('#selectInscAlumnos').multiSelect('refresh');
+            
+            console.log(datos);
+
+        }, 'json');
+
+        promise.done(function(test) {
+            console.log(test)
         });
+
+        console.log(promise);
     };
     
     $('#inputBuscarAlumnos').on('keydown', function(event) {
