@@ -81,10 +81,9 @@ function getModalidadNombre($categorias, $id)
         return "";
     }
 
-	foreach($categorias as $categoria) 
-    {
-        if ($categoria->id == $id) 
-        {
+    
+    foreach($categorias as $categoria) {
+        if ($categoria->id == $id) {
             return $categoria->nombre;
         }
     }

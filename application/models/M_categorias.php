@@ -2,7 +2,7 @@
 class m_categorias extends MY_Model
 {
     protected $_tablename	= 'categoria';
-	protected $_id_table	= 'codcategoria';     	
+	protected $_id_table	= 'id';     	
 	protected $_order		= 'nombre';
 	protected $_relation    = '';
 		

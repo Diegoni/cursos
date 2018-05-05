@@ -82,7 +82,7 @@
                         <li><a><?php echo lang('modalidad'); ?><span class="pull-right"><?php echo getModalidadNombre($categorias, $modalidad); ?></span></a></li>
                         <li><a><?php echo lang('tutor'); ?><span class="pull-right"><?php foreach($tutores as $tutor) { if($tutor->id == $codtutor) echo $tutor->nombre; } ?></span></a></li>
                         <li><a><?php echo lang('semanas_teoricas'); ?><span class="pull-right"><?php echo $semanasteoricas; ?></span></a></li>
-                        <li><a><?php echo lang('cursocanvas'); ?><span class="pull-right"><?php echo $cursocanvas; ?></span></a></li>
+                        <li><a><?php echo lang('cursocanvas'); ?><span class="pull-right"><input class="minimal" type="checkbox" <?php echo $cursocanvas == 1 ? 'checked' : ''; ?> readonly disabled></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                     <div class="form-group">
                         <label for="inputAbreviatura" class="col-xs-2 col-sm-3 control-label"><?php echo lang('abreviatura'); ?></label>
                         <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputAbreviatura" name="curso_abreviatura" placeholder="<?php echo lang('abreviatura'); ?>" value="<?php echo $abreviatura; ?>" pattern="{20}">
+                            <input type="text" class="form-control" id="inputAbreviatura" name="curso_abreviatura" placeholder="<?php echo lang('abreviatura'); ?>" value="<?php echo $abreviatura; ?>" maxlength="20">
                         </div>
                     </div>
                     <div class="form-group">
@@ -216,7 +216,7 @@
                     <div class="form-group">
                         <label for="inputHoras" class="col-xs-2 col-sm-3 control-label"><?php echo lang('horas'); ?></label>
                         <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputHoras" name="curso_horas" placeholder="<?php echo lang('horas'); ?>" value="<?php echo $horas; ?>">
+                            <input type="text" class="form-control" id="inputHoras" name="curso_horas" placeholder="<?php echo lang('horas'); ?>" value="<?php echo $horas; ?>" maxlength="3" pattern="^[0-9]{1,3}$">
                         </div>
                     </div>
                     <div class="form-group">
@@ -250,7 +250,16 @@
                         <label for="selectModalidad" class="col-xs-2 col-sm-3 control-label"><?php echo lang('modalidad'); ?></label>
                         <div class="col-xs-10 col-sm-8">
                             <select class="form-control select2" id="selectModalidad" name="curso_modalidad" style="width: 100%;">
-                                <!-- llenar categorias -->
+                                <?php
+                                    $html = '<option value="NULL" '.(($modalidad == 'NULL' || empty($modalidad)) ? 'selected' : '').' disabled>Seleccione una Categoría</option>';
+
+                                    foreach($categorias as $categoria) {
+                                        $selected = $categoria->id == $modalidad ? 'selected' : '';
+                                        $html .= '<option value="'.$categoria->id.'" '.$selected.'>'.$categoria->nombre.'</option>';
+                                    }
+
+                                    echo $html;
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -274,13 +283,13 @@
                     <div class="form-group">
                         <label for="inputSemanasTeoricas" class="col-xs-2 col-sm-3 control-label"><?php echo lang('semanas_teoricas'); ?></label>
                         <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputSemanasTeoricas" name="curso_semanas_teoricas" placeholder="<?php echo lang('semanas_teoricas'); ?>" value="<?php echo $semanasteoricas; ?>">
+                            <input type="text" class="form-control" id="inputSemanasTeoricas" name="curso_semanas_teoricas" placeholder="<?php echo lang('semanas_teoricas'); ?>" value="<?php echo $semanasteoricas; ?>" maxlength="3" pattern="^[0-9]{1,3}$">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="submit" class="btn btn-primary" name="guardar_curso" value="1">Guardar</button>
                 </div>
             </form>
         </div><!-- /.modal-content -->
@@ -299,5 +308,11 @@
 </style>
 <!-- scripts -->
 <script>
+    // init select2 plugin
     $('.select2').select2();
+    // init iCheck plugin
+    $('input[type="checkbox"].minimal').iCheck({
+        checkboxClass: 'icheckbox_minimal',
+        radioClass: 'iradio_minimal',
+    });
 </script>
