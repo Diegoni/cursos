@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 class MY_Controller extends CI_Controller
 {
 	protected $_subject;
@@ -259,6 +259,7 @@ class MY_Controller extends CI_Controller
 	function armarVista($vista, $db = NULL, $session_data = NULL)
 	{
 	    $permiso = 0;
+		$aden_vista = TRUE;
         
 	    //if($this->session->userdata('logged_in'))
 	    //{
@@ -295,12 +296,62 @@ class MY_Controller extends CI_Controller
                 }
                 
                 $this->benchmark->mark('final');
-                     
-                $this->load->view('plantilla/head', $db);
-                $this->load->view('plantilla/menu-top');
-                $this->load->view('plantilla/menu-left');
-                $this->load->view($this->_subject.'/'.$vista);
-                $this->load->view('plantilla/footer'); 
+				
+               	if(!$aden_vista)
+               	{
+               		$this->load->view('plantilla/head', $db);
+	                $this->load->view('plantilla/menu-top');
+	                $this->load->view('plantilla/menu-left');
+	                $this->load->view($this->_subject.'/'.$vista);
+	                $this->load->view('plantilla/footer');
+               	}else
+               	{
+               		//Desarrollo de Martin para armar el menú con sedes
+					$sedes = $this->m_sedes->getRegistros();
+					$menuSedes = new Menu('SEDES');
+			        $menuSEDE = new MenuItem('Sedes', 'fa fa-university');
+			        
+			        foreach($sedes as $sede){
+			            $menuSEDE->agregaItem(new MenuItem($sede->nombre, '', BASEURL.'sede/'.$sede->codSede));
+			        }
+			
+			        $menuSedes->agregaItem($menuSEDE);
+			
+			        /* Agrega menú de gestión para la sede activa.
+			         * Si no hay sede activa, no se muestra el menú.
+			         */
+			        $sedeNombre = $this->session->sedeNombre;
+			        if($sedeNombre){
+			            $menuGestion = new Menu("SEDE $sedeNombre");
+			                $menuGP = new MenuItem('Gesti&oacute;n de personas', 'fa fa-user');
+			                $menuGP->agregaItem(new MenuItem('ABM', '', BASEURL.'persona'));
+			                $menuGP->agregaItem(new MenuItem('Asociaci&oacute;n de cursos', '', '#'));
+			            $menuGestion->agregaItem($menuGP);
+			            $data['menuGestion'] = $menuGestion;
+			        }
+			        $menuGeneral = new Menu('MENU GENERAL');
+			        $menuGeneral->agregaItem(new MenuItem('Tablero', 'fa fa-dashboard', BASEURL.'tableros'));
+			        $menuGeneral->agregaItem(new MenuItem('Cursos', 'fa fa-university', BASEURL.'cursos'));
+			            $menuC = new MenuItem('Configuraci&oacute;n', 'fa fa-gear');
+			            $menuU = new MenuItem('Usuarios', '', '#');
+			                $menuU->agregaItem(new MenuItem('Nivel 3','fa fa-dashboard', 'fin'));
+			            $menuC->agregaItem(new MenuItem('Usuarios', '', '#'));
+			            $menuC->agregaItem($menuU);
+			        $menuGeneral->agregaItem($menuC);
+			        
+			        $db['menuSedes'] = $menuSedes;
+			        $db['menuGeneral'] = $menuGeneral;
+					
+					
+					
+					$this->load->view("template/header" , $db);
+			        $this->load->view("template/main_sidebar");
+			        $this->load->view($this->_subject.'/'.$vista);
+			        $this->load->view("template/footer");
+			        $this->load->view("template/control_sidebar");
+			        $this->load->view("template/end");
+               	}
+				  
             //}else 
             //{
             //   $this->setLog(4, $this->_subject.'/'.$vista.'/', 'denied_access');
