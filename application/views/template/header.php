@@ -30,6 +30,9 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    
+    <!-- Multiselect -->
+    <link rel="stylesheet" href="<?=BASEURL?>assets/multiselect/css/multi-select.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- REQUIRED JS SCRIPTS -->
@@ -49,6 +52,8 @@
     <script src="<?=BASEURL?>assets/adminlte/plugins/iCheck/icheck.min.js"></script>
     <!-- Bootstrap Datepicker -->
     <script src="<?=BASEURL?>assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+	<!-- Multiselect -->
+    <script src="<?=BASEURL?>assets/multiselect/js/jquery.multi-select.js"></script>
 
     <div class="wrapper">
         <!-- Main Header -->
