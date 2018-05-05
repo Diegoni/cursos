@@ -130,7 +130,7 @@ class Cursos extends MY_Controller
 /*--------------------------------------------------------------------------------- 
 -----------------------------------------------------------------------------------  
             
-       Datos de un curso
+      Busca los alumnos por nombre o apellido
   
 ----------------------------------------------------------------------------------- 
 ---------------------------------------------------------------------------------*/   
@@ -157,7 +157,100 @@ class Cursos extends MY_Controller
 		}
 		
 		echo json_encode($array_alumnos);
+	}
+
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Busca los alumnos por nombre o apellido
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+    function buscarAlumnos() 
+    {
+    	$buscar_alumno = $this->input->post('buscar_alumnos');
 		
+		$alumnos = $this->m_alumnos->getAlumnos($buscar_alumno);
+		
+		$array_alumnos = array();
+		
+		if($alumnos)
+		{
+			
+			foreach ($alumnos as $row) 
+			{
+				$array_alumnos[] = array(
+					'codpersona'=> $row->codpersona,
+					'nombre'	=> $row->nombre,
+					'apellido'	=> $row->apellido,
+				);
+			}
+		}
+		
+		echo json_encode($array_alumnos);
+	}
+
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Busca los alumnos por nombre o apellido
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+    function buscarAlumnos() 
+    {
+    	$buscar_alumno = $this->input->post('buscar_alumnos');
+		
+		$alumnos = $this->m_alumnos->getAlumnos($buscar_alumno);
+		
+		$array_alumnos = array();
+		
+		if($alumnos)
+		{
+			
+			foreach ($alumnos as $row) 
+			{
+				$array_alumnos[] = array(
+					'codpersona'=> $row->codpersona,
+					'nombre'	=> $row->nombre,
+					'apellido'	=> $row->apellido,
+				);
+			}
+		}
+		
+		echo json_encode($array_alumnos);
+	}
+
+
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Asigna los alumnos al curso
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+
+    function insertAlumnosCursos() 
+    {
+    	$buscar_alumno = $this->input->post('alumnos_curso');
+		
+		$array_alumnos = json_decode($buscar_alumno);
+		
+		foreach ($array_alumnos as $alumno) 
+		{
+			$insert = array(
+				'codpersona'	=> $alumno['codpersona'],
+				'codcurso'		=> $alumno['codcurso'],
+				'codestado'		=> 1,
+				//'fechaa'
+				//'fechaactual'
+			);
+			
+			$this->m_cursos_alumnos->insert($insert);
+		}
 	}
 }
 ?>
