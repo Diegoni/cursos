@@ -309,15 +309,18 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="inputNombre" class="col-xs-2 col-sm-3 control-label"><?php echo lang('nombre'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputNombre" name="curso_nombre" placeholder="<?php echo lang('nombre'); ?>" value="<?php echo $nombre; ?>">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputBuscarAlumnos" placeholder="Buscar por Nombre y/o Apellido">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" id="buttonBuscarAlumnos" type="button">Buscar</button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="selectInscAlumnos" class="col-xs-2 col-sm-3 control-label"><?php echo lang('tutor'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <select multiple="multiple" id="selectInscAlumnos" name="curso_inscr_alumno[]">
+                        <div class="col-xs-12 col-sm-12">
+                            <select class="form-control" multiple="multiple" id="selectInscAlumnos" name="curso_inscr_alumno[]">
                                 
                             </select>
                         </div>
@@ -350,5 +353,28 @@
     // init datepicker
     $('.date').datepicker({
         format: 'yyyy-mm-dd'
+    });
+    
+    var buscarAlumnos = function() {
+        var search = $('#inputBuscarAlumnos').val();
+        var url = '<?=BASEURL?>cursos/buscarAlumnos';
+
+        var promise = $.post(url, { buscar_alumnos: search }, null, 'json');
+        
+        promise.done(function(data) {
+            console.log(data);
+        });
+    };
+    
+    $('#inputBuscarAlumnos').on('keydown', function(event) {
+        if (event.keyCode === 13) {
+            buscarAlumnos();
+            return false;
+        }
+    });
+
+    $('#buttonBuscarAlumnos').on('click', function() {
+        buscarAlumnos();
+        return false;
     });
 </script>

@@ -130,7 +130,7 @@ function setDatatables($id_table = NULL, $order = NULL, $url = NULL)
 	
 	$filtro = " $('#".$id_table." tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input class=".$cor."form-control input-sm".$cor." type=".$cor."text".$cor." placeholder=".$cor."'+title+'".$cor." style=".$cor."width: 75%".$cor.";/>' );
+        $(this).html( '<input class=".$cor."form-control input-sm search-column".$cor." type=".$cor."text".$cor." placeholder=".$cor."'+title+'".$cor." style=".$cor."width: 75%".$cor.";/>' );
     } );; ";
     
     $data = '';
@@ -200,7 +200,7 @@ function setDatatables($id_table = NULL, $order = NULL, $url = NULL)
 	$data .=  "table.columns().every( function () {
 	        var that = this;
 	 
-	        $( 'input', this.footer() ).on( 'keyup change', function () {
+	        $( 'input.search-column', this.footer() ).on( 'keyup change', function () {
 	            if ( that.search() !== this.value ) {
 	                that
 	                    .search( this.value )

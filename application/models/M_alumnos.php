@@ -25,7 +25,7 @@ class m_alumnos extends MY_Model
 ---------------------------------------------------------------------------------*/   
 
 
-    function buscarAlumnos($buscar_alumno) 
+    function getAlumnos($buscar_alumno) 
     {
     	$sql = "
 		SELECT
