@@ -305,7 +305,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
-                    <h4 class="modal-title">Inscripción Alumnos</h4>
+                    <h4 class="modal-title">Inscripción Alumnos </h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -331,6 +331,7 @@
     </div><!-- /.modal-dialog -->
 </div>
 
+<!-- styles -->
 <style>
     .actions-buttons button, 
     .actions-buttons a, 
@@ -341,59 +342,14 @@
         max-width: 100%;
     }
 </style>
-<!-- scripts -->
+
+<!-- GLOBAL INSTANCES -->
+<!--     scripts      -->
 <script>
-    // init select2 plugin
-    $('.select2').select2();
-    // init iCheck plugin
-    $('input[type="checkbox"].minimal').iCheck({
-        checkboxClass: 'icheckbox_minimal',
-        radioClass: 'iradio_minimal',
-    });
-    // init datepicker
-    $('.date').datepicker({
-        format: 'yyyy-mm-dd'
-    });
-    // init multiselect
-    $('#selectInscAlumnos').multiSelect();
-    
-    var buscarAlumnos = function() {
-        var search = $('#inputBuscarAlumnos').val();
-        var url = '<?=BASEURL?>cursos/buscarAlumnos';
-
-        var select = $('#selectInscAlumnos')[0];
-
-        var promise = $.post(url, { buscar_alumnos: search }, function(datos) {
-            // append data
-            datos.forEach(function(persona) {
-                var option = document.createElement("option");
-                option.text = persona.nombre + " " + persona.apellido;
-                option.value = persona.codpersona;
-                select.appendChild(option);
-            });
-            // refresh select
-            $('#selectInscAlumnos').multiSelect('refresh');
-            
-            console.log(datos);
-
-        }, 'json');
-
-        promise.done(function(test) {
-            console.log(test)
-        });
-
-        console.log(promise);
-    };
-    
-    $('#inputBuscarAlumnos').on('keydown', function(event) {
-        if (event.keyCode === 13) {
-            buscarAlumnos();
-            return false;
-        }
-    });
-
-    $('#buttonBuscarAlumnos').on('click', function() {
-        buscarAlumnos();
-        return false;
-    });
+    /**
+     * @param {string} base url function like Codeigniter
+     */
+    const base_url = function() { return '<?= BASEURL ?>'; };
 </script>
+
+<?php echo setJs('main/cursos/js/curso.js'); ?>
