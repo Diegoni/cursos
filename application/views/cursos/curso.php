@@ -212,6 +212,18 @@
         -o-transition: border linear .2s,box-shadow linear .2s;
         transition: border linear .2s,box-shadow linear .2s;
     }
+    .clearable {
+        position: relative;
+        background: #fff url("../../assets/images/iconClose.png") no-repeat right -20px center;
+        padding-right: 30px;     /* Use the same right padding (30) in jQ! */
+        transition: background 0.4s;
+    }
+    .clearable.x   {
+        background-position: right 5px center;  /* (jQ) Show icon */
+    }
+    .clearable.onX {
+        cursor: pointer; 
+    }
 </style>
 
 <!-- GLOBAL INSTANCES -->
