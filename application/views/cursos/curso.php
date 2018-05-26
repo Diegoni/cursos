@@ -100,7 +100,7 @@
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Estado Inscr Alumnos </button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-inscribir-alumnos">Inscribir Alumnos <span class="glyphicon glyphicon-education"></span></button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Fecha/Sem Teoricas <span class="glyphicon glyphicon-calendar"></span></button></p>
-                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-cronogramas">Cronogramas</span></button></p>
+                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-cronogramas" id="btn-modal-cronogramas">Cronogramas</span></button></p>
                     <p><a class="btn btn-default <?php echo (empty($curso_canvas)) ? 'disabled' : ''; ?>" href="<?php echo (empty($curso_canvas)) ? '#' : 'https://aden.instructure.com/courses/'.$curso_canvas; ?>" target="_blank" role="button" aria-pressed="true"><?php echo lang('ven_en_canvas'); ?> <img src="https://www.aden.org/sis_test/assets/images/canvas_icon.png"></a></p>
                 </div>
             </div>
@@ -182,43 +182,6 @@
 <?php include_once 'modal-edit-curso.php'; ?>
 <?php include_once 'modal-inscribir-alumnos.php'; ?>
 
-<<<<<<< HEAD
-=======
-<!-- modal -->
-<div class="modal fade" id="modal-inscribir-alumnos" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form class="form-horizontal" method="post">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h4 class="modal-title">Inscripción Alumnos </h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="inputBuscarAlumnos" placeholder="Buscar por Nombre y/o Apellido">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" id="buttonBuscarAlumnos" type="button">Buscar</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-12">
-                            <select class="form-control" multiple="multiple" id="selectInscAlumnos" name="curso_inscr_alumno[]">
-                                
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
->>>>>>> c478afadc2f78d6818a41f64d7ea3eb0cfff7691
 
 <!-- styles -->
 <style>

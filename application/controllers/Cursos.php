@@ -4,6 +4,25 @@ class Cursos extends MY_Controller
     protected $_subject = 'cursos';                 // Nombre con el que se va a identificar el modulo
     protected $_model   = 'm_cursos';               // Modelo principal, la vista tabla automatica
     
+    protected $colors 	= array(
+		'light-blue'=> "#3c8dbc",
+        'red'		=> "#f56954",
+        'green'		=> "#00a65a",
+        'aqua'		=> "#00c0ef",
+        'yellow'	=> "#f39c12",
+        'blue'		=> "#0073b7",
+        'navy'		=> "#001F3F",
+        'teal'		=> "#39CCCC",
+        'olive'		=> "#3D9970",
+        'lime'		=> "#01FF70",
+        'orange'	=> "#FF851B",
+        'fuchsia'	=> "#F012BE",
+        'purple'	=> "#8E24AA",
+        'maroon'	=> "#D81B60",
+        'black'		=> "#222222",
+        'gray'		=> "#d2d6de"
+	); 
+    
     function __construct() {
         parent::__construct(
             $subject    = $this->_subject,
@@ -20,6 +39,8 @@ class Cursos extends MY_Controller
 		$this->load->model('m_materias');
 		$this->load->model('m_modulos');
 		$this->load->model('m_moduloscursos');
+		
+		
     } 
 
 /*--------------------------------------------------------------------------------- 
@@ -111,6 +132,7 @@ class Cursos extends MY_Controller
 		$db['categorias'] = $this->m_categorias->getRegistros();
 		$db['alumnos']    = $this->m_cursos_alumnos->getRegistros($id, 'codcurso');
 		$db['estados']    = $this->m_estados->getRegistros();
+		$db['colors']	  = $this->colors;
 
         foreach ($registros as $row) {
             $db['id']              = $row->id;
@@ -407,6 +429,137 @@ class Cursos extends MY_Controller
 			
 			echo $html;
 		}
+	}
+	
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Busca los cronogramas de un curso
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+
+    function getCronograma($id = NULL) 
+    {
+    	foreach ($this->colors as $key => $value) 
+    	{
+			$colors[] = $value;
+		};
+		
+    	$array_json = array();
+		
+    	if($id != NULL)
+    	{
+    		$materias = $this->m_materias->getRegistros($id, 'codcurso');
+			$materias_array = array();
+			
+			if($materias)
+			{
+				foreach ($materias as $row) 
+				{
+					$materias_array[$row->id] = $row->nombre;
+				}
+			}
+			
+			$i = 0;
+			
+			foreach ($materias_array as $key => $value) 
+			{
+				$cronogramas = $this->m_cronogramas->getRegistros($key, 'codmateria');
+				
+				if($cronogramas)
+				{
+					foreach ($cronogramas as $row) 
+					{
+						$registro = array(
+	        			   $row->id,
+					       $row->codmateria,
+					       $row->horaI,
+					       $row->horaF,
+					       $row->codprofesor,
+					       $row->autor,
+					       $row->agenda,
+					       $row->codmodulo,
+					       $row->fechaemision,
+					       $row->observaciones,
+					       $row->confirmado,
+					       $row->tipo,
+					       $row->fechaI,
+					       $row->fechaF,
+						);
+						
+						$array_json[] = array(
+							'title'	=> $value,
+							'id'	=> $row->id,
+							'start'	=> $row->fechaI.' '.$row->horaI.':00',
+							'end'	=> $row->fechaF.' '.$row->horaF.':00',
+							'backgroundColor' => $colors[$i],
+	         				'borderColor'     => $colors[$i],
+						);
+					}
+				}
+				
+				if($i > count($colors))
+				{
+					$i = 0;
+				}else
+				{
+					$i = $i + 1;
+				}
+			}
+		}
+
+		echo json_encode($array_json);
+	}
+
+	
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Busca las materias para el cronograma
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+
+    function getMaterias($id = NULL) 
+    {
+    	foreach ($this->colors as $key => $value) 
+    	{
+			$colors[] = $key;
+		};
+		
+		$i = 0;
+    	$materias_array = array();
+		
+    	if($id != NULL)
+    	{
+    		$materias = $this->m_materias->getRegistros($id, 'codcurso');
+			$materias_array = array();
+			
+			if($materias)
+			{
+				foreach ($materias as $row) 
+				{
+					$materias_array[] = array(
+						'id' => $row->id,
+						'nombre' => $row->nombre,
+						'btn'	=> $colors[$i],
+					);
+					
+					if($i > count($colors))
+					{
+						$i = 0;
+					}else
+					{
+						$i = $i + 1;
+					}
+				}
+			}
+		}
+
+		echo json_encode($materias_array);
 	}
 }
 ?>
