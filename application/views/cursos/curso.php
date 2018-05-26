@@ -192,6 +192,26 @@
         white-space: nowrap;
         max-width: 100%;
     }
+    .select-insc-header {
+        text-align: center;
+    }
+    .select-insc-footer {
+        color: #555;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        margin-top: 5px;
+        padding: 6px 12px;
+        height: auto;
+        border: 1px solid #ccc;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border linear .2s,box-shadow linear .2s;
+        -moz-transition: border linear .2s,box-shadow linear .2s;
+        -o-transition: border linear .2s,box-shadow linear .2s;
+        transition: border linear .2s,box-shadow linear .2s;
+    }
 </style>
 
 <!-- GLOBAL INSTANCES -->

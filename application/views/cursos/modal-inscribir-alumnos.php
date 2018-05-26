@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="inputBuscarAlumnos" placeholder="Buscar por Nombre y/o Apellido">
+                                <input type="text" class="form-control" id="inputBuscarAlumnos" placeholder="Buscar por Nombre y/o Apellido" autocomplete='off'>
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" id="buttonBuscarAlumnos" type="button">Buscar</button>
                                 </span>

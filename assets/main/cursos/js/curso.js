@@ -23,8 +23,7 @@
 		format: 'yyyy-mm-dd'
 	});
 
-	// init multiselect
-    $('#selectInscAlumnos').multiSelect();
+	
 
 }($));
 /**
@@ -89,8 +88,15 @@
 
 		// resolve promise
 		buscarAlumnosPromise.done(function(datos) {
+			// clean last search
+			$(selectInscAlumnos).find('option:not(:selected)').remove();
 	        // append data
 	        datos.forEach(function(persona) {
+	        	// check if option exist
+	        	if($(selectInscAlumnos).find('option[value="'+persona.codpersona+'"]:selected').length > 0) {
+	        		return false;
+	        	}
+	        	// append new option
 	        	var option   = document.createElement("option");
 	        	option.text  = persona.nombre + " " + persona.apellido;
 	        	option.value = persona.codpersona;
@@ -107,7 +113,6 @@
 
 		// reject promise
 		buscarAlumnosPromise.fail(function() {
-			console.log("terminamos");
 			// release cached promise and request
 	        buscarAlumnosPromise = undefined;
 			buscarAlumnosRequest = undefined;
@@ -128,6 +133,14 @@
     $(buttonBuscarAlumnos).on('click', function() {
     	buscarAlumnos();
     	return false;
+    });
+
+	// init multiselect
+    $(selectInscAlumnos).multiSelect({
+		selectableHeader: "<div class='select-insc-header'>Alumnos Disponibles</div>",
+		selectionHeader: "<div class='select-insc-header'>Alumnos A Inscribir</div>",
+		selectableFooter: "<input type='text' class='select-insc-footer' autocomplete='off' placeholder='Filtrar'>",
+  		selectionFooter: "<input type='text' class='select-insc-footer' autocomplete='off' placeholder='Filtrar'>",
     });
 
 }($));
