@@ -100,7 +100,7 @@
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Estado Inscr Alumnos </button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-inscribir-alumnos">Inscribir Alumnos <span class="glyphicon glyphicon-education"></span></button></p>
                     <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Modificar Fecha/Sem Teoricas <span class="glyphicon glyphicon-calendar"></span></button></p>
-                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#">Cronogramas</span></button></p>
+                    <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-cronogramas">Cronogramas</span></button></p>
                     <p><a class="btn btn-default <?php echo (empty($curso_canvas)) ? 'disabled' : ''; ?>" href="<?php echo (empty($curso_canvas)) ? '#' : 'https://aden.instructure.com/courses/'.$curso_canvas; ?>" target="_blank" role="button" aria-pressed="true"><?php echo lang('ven_en_canvas'); ?> <img src="https://www.aden.org/sis_test/assets/images/canvas_icon.png"></a></p>
                 </div>
             </div>
@@ -177,160 +177,13 @@
     </div>
 </section>
 
-<!-- modal -->
-<div class="modal fade" id="modal-edit-curso" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form class="form-horizontal" method="post">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h4 class="modal-title">Editar Curso</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="inputNombre" class="col-xs-2 col-sm-3 control-label"><?php echo lang('nombre'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputNombre" name="curso_nombre" placeholder="<?php echo lang('nombre'); ?>" value="<?php echo $nombre; ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAbreviatura" class="col-xs-2 col-sm-3 control-label"><?php echo lang('abreviatura'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputAbreviatura" name="curso_abreviatura" placeholder="<?php echo lang('abreviatura'); ?>" value="<?php echo $abreviatura; ?>" maxlength="20">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputComienza" class="col-xs-2 col-sm-3 control-label"><?php echo lang('comienza'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control date" id="inputComienza" name="curso_comienza" placeholder="<?php echo lang('comienza'); ?>" value="<?php echo $comienza; ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputFinaliza" class="col-xs-2 col-sm-3 control-label"><?php echo lang('finaliza'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control date" id="inputFinaliza" name="curso_finaliza" placeholder="<?php echo lang('finaliza'); ?>" value="<?php echo $finaliza; ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputHoras" class="col-xs-2 col-sm-3 control-label"><?php echo lang('horas'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputHoras" name="curso_horas" placeholder="<?php echo lang('horas'); ?>" value="<?php echo $horas; ?>" maxlength="3" pattern="^[0-9]{1,3}$">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectClase" class="col-xs-2 col-sm-3 control-label"><?php echo lang('clase'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <select class="form-control select2" id="selectClase" name="curso_clase" style="width: 100%;">
-                                <option disabled value="NULL" <?php if (getClaseNombre($clase) == '') echo "selected"; ?>>Seleccione una Clase</option>
-                                <option value="5" <?php if ($clase == 5) echo "selected"; ?>><?php echo getClaseNombre(5); ?></option>
-                                <option value="9" <?php if ($clase == 9) echo "selected"; ?>><?php echo getClaseNombre(9); ?></option>
-                                <option value="6" <?php if ($clase == 6) echo "selected"; ?>><?php echo getClaseNombre(6); ?></option>
-                                <option value="0" <?php if ($clase == 1 || $clase == 2 || $clase == 7 || $clase == 80) echo "selected"; ?>>Otro</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectTipogral" class="col-xs-2 col-sm-3 control-label"><?php echo lang('tipogral'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <select class="form-control select2" id="selectTipogral" name="curso_tipogral" style="width: 100%;">
-                                <option disabled value="NULL" <?php if (getTipoGralNombre($tipogral) == '') echo "selected"; ?>>Seleccione un Tipo General</option>
-                                <option value="4"  <?php if ($tipogral == 4)  echo "selected"; ?>><?php echo getTipoGralNombre(4);  ?></option>
-                                <option value="5"  <?php if ($tipogral == 5)  echo "selected"; ?>><?php echo getTipoGralNombre(5);  ?></option>
-                                <option value="6"  <?php if ($tipogral == 6)  echo "selected"; ?>><?php echo getTipoGralNombre(6);  ?></option>
-                                <option value="7"  <?php if ($tipogral == 7)  echo "selected"; ?>><?php echo getTipoGralNombre(7);  ?></option>
-                                <option value="8"  <?php if ($tipogral == 8)  echo "selected"; ?>><?php echo getTipoGralNombre(8);  ?></option>
-                                <option value="9"  <?php if ($tipogral == 9)  echo "selected"; ?>><?php echo getTipoGralNombre(9);  ?></option>
-                                <option value="10" <?php if ($tipogral == 10) echo "selected"; ?>><?php echo getTipoGralNombre(10); ?></option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectModalidad" class="col-xs-2 col-sm-3 control-label"><?php echo lang('modalidad'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <select class="form-control select2" id="selectModalidad" name="curso_modalidad" style="width: 100%;">
-                                <?php
-                                    $html = '<option value="NULL" '.(($modalidad == 'NULL' || empty($modalidad)) ? 'selected' : '').' disabled>Seleccione una Categoría</option>';
 
-                                    foreach($categorias as $categoria) {
-                                        $selected = $categoria->id == $modalidad ? 'selected' : '';
-                                        $html .= '<option value="'.$categoria->id.'" '.$selected.'>'.$categoria->nombre.'</option>';
-                                    }
+<?php include_once 'modal-cronogramas.php'; ?>
+<?php include_once 'modal-edit-curso.php'; ?>
+<?php include_once 'modal-inscribir-alumnos.php'; ?>
 
-                                    echo $html;
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectTutor" class="col-xs-2 col-sm-3 control-label"><?php echo lang('tutor'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <select class="form-control select2" id="selectTutor" name="curso_tutor" style="width: 100%;">
-                            <?php
-                                $html = '<option value="NULL" '.($codtutor == 'NULL' ? 'selected' : '').' disabled>Seleccione un Tutor</option>';
 
-                                foreach($tutores as $tutor) {
-                                    $selected = $tutor->id == $codtutor ? 'selected' : '';
-                                    $html .= '<option value="'.$tutor->id.'" '.$selected.'>'.$tutor->nombre.'</option>';
-                                }
-
-                                echo $html;
-                            ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputSemanasTeoricas" class="col-xs-2 col-sm-3 control-label"><?php echo lang('semanas_teoricas'); ?></label>
-                        <div class="col-xs-10 col-sm-8">
-                            <input type="text" class="form-control" id="inputSemanasTeoricas" name="curso_semanas_teoricas" placeholder="<?php echo lang('semanas_teoricas'); ?>" value="<?php echo $semanasteoricas; ?>" maxlength="3" pattern="^[0-9]{1,3}$">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" name="guardar_curso" value="1">Guardar</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
-
-<!-- modal -->
-<div class="modal fade" id="modal-inscribir-alumnos" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form class="form-horizontal" method="post">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h4 class="modal-title">Inscripción Alumnos</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="inputBuscarAlumnos" placeholder="Buscar por Nombre y/o Apellido">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" id="buttonBuscarAlumnos" type="button">Buscar</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-12">
-                            <select class="form-control" multiple="multiple" id="selectInscAlumnos" name="curso_inscr_alumno[]">
-                                
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
-
+<!-- styles -->
 <style>
     .actions-buttons button, 
     .actions-buttons a, 
@@ -341,59 +194,14 @@
         max-width: 100%;
     }
 </style>
-<!-- scripts -->
+
+<!-- GLOBAL INSTANCES -->
+<!--     scripts      -->
 <script>
-    // init select2 plugin
-    $('.select2').select2();
-    // init iCheck plugin
-    $('input[type="checkbox"].minimal').iCheck({
-        checkboxClass: 'icheckbox_minimal',
-        radioClass: 'iradio_minimal',
-    });
-    // init datepicker
-    $('.date').datepicker({
-        format: 'yyyy-mm-dd'
-    });
-    // init multiselect
-    $('#selectInscAlumnos').multiSelect();
-    
-    var buscarAlumnos = function() {
-        var search = $('#inputBuscarAlumnos').val();
-        var url = '<?=BASEURL?>cursos/buscarAlumnos';
-
-        var select = $('#selectInscAlumnos')[0];
-
-        var promise = $.post(url, { buscar_alumnos: search }, function(datos) {
-            // append data
-            datos.forEach(function(persona) {
-                var option = document.createElement("option");
-                option.text = persona.nombre + " " + persona.apellido;
-                option.value = persona.codpersona;
-                select.appendChild(option);
-            });
-            // refresh select
-            $('#selectInscAlumnos').multiSelect('refresh');
-            
-            console.log(datos);
-
-        }, 'json');
-
-        promise.done(function(test) {
-            console.log(test)
-        });
-
-        console.log(promise);
-    };
-    
-    $('#inputBuscarAlumnos').on('keydown', function(event) {
-        if (event.keyCode === 13) {
-            buscarAlumnos();
-            return false;
-        }
-    });
-
-    $('#buttonBuscarAlumnos').on('click', function() {
-        buscarAlumnos();
-        return false;
-    });
+    /**
+     * @param {string} base url function like Codeigniter
+     */
+    const base_url = function() { return '<?= BASEURL ?>'; };
 </script>
+
+<?php echo setJs('main/cursos/js/curso.js'); ?>

@@ -16,6 +16,10 @@ class Cursos extends MY_Controller
 		$this->load->model('m_alumnos');
 		$this->load->model('m_estados');
 		$this->load->model('m_cursos_alumnos');
+		$this->load->model('m_cronogramas');
+		$this->load->model('m_materias');
+		$this->load->model('m_modulos');
+		$this->load->model('m_moduloscursos');
     } 
 
 /*--------------------------------------------------------------------------------- 
@@ -191,6 +195,217 @@ class Cursos extends MY_Controller
 			);
 			
 			$this->m_cursos_alumnos->insert($insert);
+		}
+	}
+	
+/*--------------------------------------------------------------------------------- 
+-----------------------------------------------------------------------------------  
+            
+      Busca los cronogramas de un curso
+  
+----------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------*/   
+
+
+    function getCronogramas($id = NULL) 
+    {
+    	if($id != NULL)
+    	{
+    		// MATERIAS 
+    		
+    		$materias = $this->m_materias->getRegistros($id, 'codcurso');
+			
+			$html = "
+			SELECT 
+				* 
+			FROM 
+				materias 
+			WHERE 
+				codcurso = '".$id."' <br>"; 
+				
+			$materias_array = array();
+			
+			if($materias)
+			{
+				$cabeceras = array(
+					'id',
+					'codcurso',
+					'nombre',
+					'programa',
+					'asistencia',
+					'horas',
+					'oral',
+					'cantrabajo',
+					'abreviatura',
+					'afecta',
+					'tipo',
+					'codigo',
+					'fechareposicion',
+					'TEMP',
+					'fecha',    
+				);
+			
+				$html .= startTable($cabeceras);
+				
+				foreach ($materias as $row) 
+				{
+					$registro = array(
+        				$row->id,
+						$row->codcurso,
+						$row->nombre,
+						$row->programa,
+						$row->asistencia,
+						$row->horas,
+						$row->oral,
+						$row->cantrabajo,
+						$row->abreviatura,
+						$row->afecta,
+						$row->tipo,
+						$row->codigo,
+						$row->fechareposicion,
+						$row->TEMP,
+						$row->fecha,    
+					);
+					
+					$materias_array[] = $row->id;
+					
+					$content = setTableContent($registro);
+
+					$html .= $content;
+				}
+				
+				$html .= endTable($cabeceras);
+			}else
+			{
+				$html .= "NO hay materias asociados <br>";
+			}
+			
+			
+			// ModulosCursos 
+			$moduloscursos = $this->m_moduloscursos->getModulos($id);
+			$html .= "<br><br><hr>
+			SELECT
+				*
+			FROM
+				ModulosCursos
+			INNER JOIN
+				Modulos on(ModulosCursos.codmodulo = Modulos.id)
+			WHERE
+				ModulosCursos.codcurso = '".$id."'' <br>";
+			
+			if($moduloscursos)
+			{
+				unset($cabeceras); 
+				
+				$cabeceras = array(
+					'id',
+					'codcurso',
+					'codmodulo',
+				 	'nombre',
+				 	'abreviatura',
+					'codigo',
+				);
+				
+				$html .= startTable($cabeceras);
+				
+				foreach ($moduloscursos as $row) 
+				{
+					$registro = array(
+        				$row->id,
+						$row->codcurso,
+						$row->codmodulo,
+						$row->nombre,
+						$row->abreviatura,
+						$row->codigo,
+					);
+
+					$content = setTableContent($registro);
+
+					$html .= $content;
+				}
+				
+				$html .= endTable($cabeceras);
+			}else
+			{
+				$html .= "NO hay modulos asociados <br>";
+			}
+			
+			
+			
+			$html .= "<br><br><hr>";
+			
+			//Cronogramas
+			
+			unset($cabeceras); 
+			
+			$cabeceras = array(
+				'id',
+		       'codmateria',
+		       'horaI',
+		       'horaF',
+		       'codprofesor',
+		       'autor',
+		       'agenda',
+		       'codmodulo',
+		       'fechaemision',
+		       'observaciones',
+		       'confirmado',
+		       'tipo',
+		       'fechaI',
+		       'fechaF',
+			);
+			
+			foreach ($materias_array as $key => $value) 
+			{
+				$html .= "
+				<br><hr>
+				SELECT 
+					* 
+				FROM 
+					materias 
+				WHERE 
+					codcurso = '".$value."' <br>"; 
+					
+				$cronogramas = $this->m_cronogramas->getRegistros($value, 'codmateria');
+				
+				if($cronogramas)
+				{
+					$html .= startTable($cabeceras);
+					
+					foreach ($cronogramas as $row) 
+					{
+						$registro = array(
+	        			   $row->id,
+					       $row->codmateria,
+					       $row->horaI,
+					       $row->horaF,
+					       $row->codprofesor,
+					       $row->autor,
+					       $row->agenda,
+					       $row->codmodulo,
+					       $row->fechaemision,
+					       $row->observaciones,
+					       $row->confirmado,
+					       $row->tipo,
+					       $row->fechaI,
+					       $row->fechaF,
+						);
+	
+						$content = setTableContent($registro);
+	
+						$html .= $content;
+					}
+					
+					$html .= endTable();
+					
+				}else
+				{
+					$html .= "NO hay cronogramas asociados <br>";
+				}
+				
+			}
+			
+			echo $html;
 		}
 	}
 }
